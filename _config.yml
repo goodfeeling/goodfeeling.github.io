@@ -1,6 +1,10 @@
-title: goodfeeling
+title: yaozhiwen
 logo: /assets/img/logo.jpg
-description: Minimal is a theme for GitHub Pages.
+description: 分享快乐.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
+
+about: ./about.html
+life: ./life.html
+notes: ./notes.html
