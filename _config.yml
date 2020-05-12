@@ -1,10 +1,8 @@
-title: yaozhiwen
-logo: /assets/img/logo.jpg
-description: 分享快乐.
+title: Goodfeeling
+description: this is blog
 show_downloads: true
 google_analytics:
-theme: jekyll-theme-minimal
+theme: jekyll-theme-leap-day
 
-about: ./about.html
-life: ./life.html
-notes: ./notes.html
+baseUrl: /categories
+categories: [live, food]
