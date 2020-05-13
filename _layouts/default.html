@@ -101,7 +101,7 @@
             {% endif %}
           {% endfor %}
 
-          <div id="tagscloud">
+          <div id="tag-cloud">
             {{ site | tag_cloud }}
           </div>
       </div>
@@ -165,7 +165,7 @@
           {
             var i=0;
             var oTag=null;
-            oDiv=document.getElementById('tagscloud');
+            oDiv=document.getElementById('tag-cloud');
             aA=oDiv.getElementsByTagName('a');
             for(i=0;i<aA.length;i++)
             {
