@@ -4,15 +4,6 @@ show_downloads: true
 google_analytics:
 theme: jekyll-theme-leap-day
 
-# baseUrl: /categories
-# 
-plugins: [jekyll/tagging]
-
 tag_page_layout: tag_page
 tag_page_dir: tag
-tag_feed_layout: tag_feed
-tag_feed_dir: tag
-tag_page_data:
-  sitemap: false
 
-tag_permalink_style: pretty
