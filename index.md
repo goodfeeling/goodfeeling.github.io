@@ -1,5 +1,7 @@
 ---
 layout: default
+author: Willow Rosenberg
+tags: feminism anti-capitalism witchcraft
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

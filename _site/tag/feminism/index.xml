@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Your Title - feminism</title>
+ <link href="http://example.com/tag/feminism/index.xml" rel="self"/>
+ <link href="http://example.com/tag/feminism.html"/>
+ <updated>2020-05-13T05:37:46+00:00</updated>
+ <id>http://example.com/tag/feminism.html</id>
+ <author>
+   <name>Author Here</name>
+ </author>
+ 
+ <entry>
+   <title>foo</title>
+   <link href="http://example.com/foo/myfoo/2012/12/31/new-years-eve-is-awesome.html"/>
+   <updated>2012-12-31T00:00:00+00:00</updated>
+   <id>http://example.com/foo/myfoo/2012/12/31/new-years-eve-is-awesome</id>
+   <content type="html">&lt;h2 id=&quot;welcome-to-another-page&quot;&gt;Welcome to another page&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;yay&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;./&quot;&gt;back&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Live</title>
+   <link href="http://example.com/live/mylife/2011/12/31/new-years-eve-is-awesome.html"/>
+   <updated>2011-12-31T00:00:00+00:00</updated>
+   <id>http://example.com/live/mylife/2011/12/31/new-years-eve-is-awesome</id>
+   <content type="html">&lt;h2 id=&quot;welcome-to-another-page&quot;&gt;Welcome to another page&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;yay&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;./&quot;&gt;back&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+</feed>

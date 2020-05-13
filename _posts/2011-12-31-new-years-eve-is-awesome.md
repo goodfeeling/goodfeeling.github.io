@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Live
-category: live
+categories: [live,mylife]
+tags: feminism anti-capitalism witchcraft
 ---
 
 ## Welcome to another page

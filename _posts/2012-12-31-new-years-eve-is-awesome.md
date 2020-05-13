@@ -1,7 +1,8 @@
 ---
 layout: default
 title: foo
-category: foo
+categories: [foo,myfoo]
+tags: feminism anti-capitalism witchcraft
 ---
 
 ## Welcome to another page
