@@ -4,6 +4,3 @@ show_downloads: true
 google_analytics:
 theme: jekyll-theme-leap-day
 
-tag_page_layout: tag_page
-tag_page_dir: tag
-
