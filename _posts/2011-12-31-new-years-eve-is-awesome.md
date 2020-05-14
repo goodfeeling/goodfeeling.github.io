@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Live
-categories: [live,mylife]
+categories: [live, food]
 tags: Jeminism Anti-capitalism Witchcraft
 ---
 
