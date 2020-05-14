@@ -2,7 +2,7 @@
 layout: default
 title: foo
 categories: [foo,myfoo]
-tags: feminism anti-capitalism witchcraft
+tags: Feminism Anti-capitalism Witchcraft
 ---
 
 ## Welcome to another page

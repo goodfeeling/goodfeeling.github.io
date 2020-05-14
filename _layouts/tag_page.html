@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="home">
-    <h1 class="page-heading">带有标签 #{{ page.tag_name | escape }} 的文章列表</h1>
+    <h1 class="page-heading">{{ page.tag_name | escape }}相关的文章</h1>
     <ul class="post-list">
         {% for post in site.tags[page.tag_name] %}
         {% include post_list_item.html post_item=post %}

@@ -1,7 +1,6 @@
 ---
 layout: default
 author: Willow Rosenberg
-tags: feminism anti-capitalism witchcraft
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
@@ -44,6 +43,8 @@ end
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
+
+# Header 2
 
 ##### Header 5
 

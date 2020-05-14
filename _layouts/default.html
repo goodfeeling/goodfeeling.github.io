@@ -46,11 +46,17 @@
         <ul></ul>
       </nav>
       <section>
+        {% if page.tags.size > 0 %}
+            <span>TAGS:</span>
+            {% for tag in page.tags %}
+            <a href="{% include tag_link.html tag_name = tag %}">{{ tag | escpe }}</a>
+            {% endfor %}
+        {% endif %}
         {{ content }}
       </section>
       
       <div class="category-list">
-        <label>我的笔记:</label>
+        <label>归档:</label>
         {% assign sort_categories = site.categories | sort %}
 
         {% for category in sort_categories %}
