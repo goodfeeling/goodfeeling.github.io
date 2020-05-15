@@ -9,15 +9,15 @@
 <meta name="generator" content="Jekyll v4.0.1" />
 <meta property="og:title" content="DDL" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="DDL 数据定义语言 库和表的管理 一、库的管理 创建、修改、删除 二、表的管理 创建、修改、删除 创建： create 修改： alter 删除： drop 一、库的管理 1、库的创建 语法： create database [if not exists]库名; #案例：创建库Books CREATE DATABASE IF NOT EXISTS books; 2、库的修改 RENAME DATABASE books TO 新库名; #更改库的字符集 ALTER DATABASE books CHARACTER SET gbk; 3、库的删除 DROP DATABASE IF EXISTS books; 二、表的管理 1.表的创建 ★ 语法： create table 表名( 列名 列的类型【(长度) 约束】, 列名 列的类型【(长度) 约束】, 列名 列的类型【(长度) 约束】, … 列名 列的类型【(长度) 约束】 ) #案例：创建表Book CREATE TABLE book( id INT,#编号 bName VARCHAR(20),#图书名 price DOUBLE,#价格 authorId INT,#作者编号 publishDate DATETIME#出版日期 ); DESC book; #案例：创建表author CREATE TABLE IF NOT EXISTS author( id INT, au_name VARCHAR(20), nation VARCHAR(10) ) DESC author; 2.表的修改 语法 alter table 表名 add|drop|modify|change column 列名 【列类型 约束】; #①修改列名 ALTER TABLE book CHANGE COLUMN publishdate pubDate DATETIME; #②修改列的类型或约束 ALTER TABLE book MODIFY COLUMN pubdate TIMESTAMP; #③添加新列 ALTER TABLE author ADD COLUMN annual DOUBLE; #④删除列 ALTER TABLE book_author DROP COLUMN annual; #⑤修改表名 ALTER TABLE author RENAME TO book_author; DESC book; 3.表的删除 DROP TABLE IF EXISTS book_author; SHOW TABLES; #通用的写法： DROP DATABASE IF EXISTS 旧库名; CREATE DATABASE 新库名; DROP TABLE IF EXISTS 旧表名; CREATE TABLE 表名(); 4.表的复制 INSERT INTO author VALUES (1,&#39;村上春树&#39;,&#39;日本&#39;), (2,&#39;莫言&#39;,&#39;中国&#39;), (3,&#39;冯唐&#39;,&#39;中国&#39;), (4,&#39;金庸&#39;,&#39;中国&#39;); SELECT * FROM Author; SELECT * FROM copy2; #1.仅仅复制表的结构 CREATE TABLE copy LIKE author; #2.复制表的结构+数据 CREATE TABLE copy2 SELECT * FROM author; #只复制部分数据 CREATE TABLE copy3 SELECT id,au_name FROM author WHERE nation=&#39;中国&#39;; #仅仅复制某些字段 CREATE TABLE copy4 SELECT id,au_name FROM author WHERE 0;" />
-<meta property="og:description" content="DDL 数据定义语言 库和表的管理 一、库的管理 创建、修改、删除 二、表的管理 创建、修改、删除 创建： create 修改： alter 删除： drop 一、库的管理 1、库的创建 语法： create database [if not exists]库名; #案例：创建库Books CREATE DATABASE IF NOT EXISTS books; 2、库的修改 RENAME DATABASE books TO 新库名; #更改库的字符集 ALTER DATABASE books CHARACTER SET gbk; 3、库的删除 DROP DATABASE IF EXISTS books; 二、表的管理 1.表的创建 ★ 语法： create table 表名( 列名 列的类型【(长度) 约束】, 列名 列的类型【(长度) 约束】, 列名 列的类型【(长度) 约束】, … 列名 列的类型【(长度) 约束】 ) #案例：创建表Book CREATE TABLE book( id INT,#编号 bName VARCHAR(20),#图书名 price DOUBLE,#价格 authorId INT,#作者编号 publishDate DATETIME#出版日期 ); DESC book; #案例：创建表author CREATE TABLE IF NOT EXISTS author( id INT, au_name VARCHAR(20), nation VARCHAR(10) ) DESC author; 2.表的修改 语法 alter table 表名 add|drop|modify|change column 列名 【列类型 约束】; #①修改列名 ALTER TABLE book CHANGE COLUMN publishdate pubDate DATETIME; #②修改列的类型或约束 ALTER TABLE book MODIFY COLUMN pubdate TIMESTAMP; #③添加新列 ALTER TABLE author ADD COLUMN annual DOUBLE; #④删除列 ALTER TABLE book_author DROP COLUMN annual; #⑤修改表名 ALTER TABLE author RENAME TO book_author; DESC book; 3.表的删除 DROP TABLE IF EXISTS book_author; SHOW TABLES; #通用的写法： DROP DATABASE IF EXISTS 旧库名; CREATE DATABASE 新库名; DROP TABLE IF EXISTS 旧表名; CREATE TABLE 表名(); 4.表的复制 INSERT INTO author VALUES (1,&#39;村上春树&#39;,&#39;日本&#39;), (2,&#39;莫言&#39;,&#39;中国&#39;), (3,&#39;冯唐&#39;,&#39;中国&#39;), (4,&#39;金庸&#39;,&#39;中国&#39;); SELECT * FROM Author; SELECT * FROM copy2; #1.仅仅复制表的结构 CREATE TABLE copy LIKE author; #2.复制表的结构+数据 CREATE TABLE copy2 SELECT * FROM author; #只复制部分数据 CREATE TABLE copy3 SELECT id,au_name FROM author WHERE nation=&#39;中国&#39;; #仅仅复制某些字段 CREATE TABLE copy4 SELECT id,au_name FROM author WHERE 0;" />
-<link rel="canonical" href="http://0.0.0.0:8080/database/mysql/2020/05/14/DDL.html" />
-<meta property="og:url" content="http://0.0.0.0:8080/database/mysql/2020/05/14/DDL.html" />
+<meta name="description" content="DDL 数据定义语言库和表的管理 一、库的管理创建、修改、删除 二、表的管理创建、修改、删除" />
+<meta property="og:description" content="DDL 数据定义语言库和表的管理 一、库的管理创建、修改、删除 二、表的管理创建、修改、删除" />
+<link rel="canonical" href="http://0.0.0.0/database/mysql/2020/05/14/DDL.html" />
+<meta property="og:url" content="http://0.0.0.0/database/mysql/2020/05/14/DDL.html" />
 <meta property="og:site_name" content="Goodfeeling" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-05-14T00:00:00+08:00" />
+<meta property="article:published_time" content="2020-05-14T00:00:00+00:00" />
 <script type="application/ld+json">
-{"headline":"DDL","dateModified":"2020-05-14T00:00:00+08:00","datePublished":"2020-05-14T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:8080/database/mysql/2020/05/14/DDL.html"},"description":"DDL 数据定义语言 库和表的管理 一、库的管理 创建、修改、删除 二、表的管理 创建、修改、删除 创建： create 修改： alter 删除： drop 一、库的管理 1、库的创建 语法： create database [if not exists]库名; #案例：创建库Books CREATE DATABASE IF NOT EXISTS books; 2、库的修改 RENAME DATABASE books TO 新库名; #更改库的字符集 ALTER DATABASE books CHARACTER SET gbk; 3、库的删除 DROP DATABASE IF EXISTS books; 二、表的管理 1.表的创建 ★ 语法： create table 表名( 列名 列的类型【(长度) 约束】, 列名 列的类型【(长度) 约束】, 列名 列的类型【(长度) 约束】, … 列名 列的类型【(长度) 约束】 ) #案例：创建表Book CREATE TABLE book( id INT,#编号 bName VARCHAR(20),#图书名 price DOUBLE,#价格 authorId INT,#作者编号 publishDate DATETIME#出版日期 ); DESC book; #案例：创建表author CREATE TABLE IF NOT EXISTS author( id INT, au_name VARCHAR(20), nation VARCHAR(10) ) DESC author; 2.表的修改 语法 alter table 表名 add|drop|modify|change column 列名 【列类型 约束】; #①修改列名 ALTER TABLE book CHANGE COLUMN publishdate pubDate DATETIME; #②修改列的类型或约束 ALTER TABLE book MODIFY COLUMN pubdate TIMESTAMP; #③添加新列 ALTER TABLE author ADD COLUMN annual DOUBLE; #④删除列 ALTER TABLE book_author DROP COLUMN annual; #⑤修改表名 ALTER TABLE author RENAME TO book_author; DESC book; 3.表的删除 DROP TABLE IF EXISTS book_author; SHOW TABLES; #通用的写法： DROP DATABASE IF EXISTS 旧库名; CREATE DATABASE 新库名; DROP TABLE IF EXISTS 旧表名; CREATE TABLE 表名(); 4.表的复制 INSERT INTO author VALUES (1,&#39;村上春树&#39;,&#39;日本&#39;), (2,&#39;莫言&#39;,&#39;中国&#39;), (3,&#39;冯唐&#39;,&#39;中国&#39;), (4,&#39;金庸&#39;,&#39;中国&#39;); SELECT * FROM Author; SELECT * FROM copy2; #1.仅仅复制表的结构 CREATE TABLE copy LIKE author; #2.复制表的结构+数据 CREATE TABLE copy2 SELECT * FROM author; #只复制部分数据 CREATE TABLE copy3 SELECT id,au_name FROM author WHERE nation=&#39;中国&#39;; #仅仅复制某些字段 CREATE TABLE copy4 SELECT id,au_name FROM author WHERE 0;","@type":"BlogPosting","url":"http://0.0.0.0:8080/database/mysql/2020/05/14/DDL.html","@context":"https://schema.org"}</script>
+{"url":"http://0.0.0.0/database/mysql/2020/05/14/DDL.html","@type":"BlogPosting","headline":"DDL","dateModified":"2020-05-14T00:00:00+00:00","datePublished":"2020-05-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0/database/mysql/2020/05/14/DDL.html"},"description":"DDL 数据定义语言库和表的管理 一、库的管理创建、修改、删除 二、表的管理创建、修改、删除","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
@@ -72,38 +72,43 @@
             
         
         <h1 id="ddl">DDL</h1>
-<p>数据定义语言
-库和表的管理
-一、库的管理
-创建、修改、删除
-二、表的管理
-创建、修改、删除</p>
+<blockquote>
+  <p>数据定义语言库和表的管理
+一、库的管理创建、修改、删除
+二、表的管理创建、修改、删除</p>
+</blockquote>
 
-<p>创建： create
+<blockquote>
+  <p>创建： create
 修改： alter
 删除： drop</p>
+</blockquote>
 
-<h2 id="一库的管理">一、库的管理</h2>
-<h3 id="1库的创建">1、库的创建</h3>
+<h2 id="database-created">Database Created</h2>
 
-<p>语法：
+<blockquote>
+  <p>语法：
 create database  [if not exists]库名;</p>
+</blockquote>
 
-<p>#案例：创建库Books
-CREATE DATABASE IF NOT EXISTS books;</p>
+<h2 id="database-modification">Database modification</h2>
 
-<h3 id="2库的修改">2、库的修改</h3>
-<p>RENAME DATABASE books TO 新库名;</p>
+<blockquote>
+  <p>RENAME DATABASE books TO 新库名;</p>
+</blockquote>
+
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">#</span><span class="err">更改库的字符集</span>
 <span class="k">ALTER</span> <span class="k">DATABASE</span> <span class="n">books</span> <span class="nb">CHARACTER</span> <span class="k">SET</span> <span class="n">gbk</span><span class="p">;</span>
 </code></pre></div></div>
-<h3 id="3库的删除">3、库的删除</h3>
+<h2 id="database-delete">Database Delete</h2>
+
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DROP</span> <span class="k">DATABASE</span> <span class="n">IF</span> <span class="k">EXISTS</span> <span class="n">books</span><span class="p">;</span>
 </code></pre></div></div>
-<h2 id="二表的管理">二、表的管理</h2>
-<h3 id="1表的创建-">1.表的创建 ★</h3>
 
-<p>语法：
+<h2 id="table-create-">Table create ★</h2>
+
+<blockquote>
+  <p>语法：
 create table 表名(
 	列名 列的类型【(长度) 约束】,
 	列名 列的类型【(长度) 约束】,
@@ -111,6 +116,8 @@ create table 表名(
 	…
 	列名 列的类型【(长度) 约束】
 )</p>
+</blockquote>
+
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">#</span><span class="err">案例：创建表</span><span class="n">Book</span>
 
 <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">book</span><span class="p">(</span>
@@ -133,8 +140,21 @@ create table 表名(
 <span class="k">DESC</span> <span class="n">author</span><span class="p">;</span>
 </code></pre></div></div>
 
-<h3 id="2表的修改">2.表的修改</h3>
-<p>语法 alter table 表名 add|drop|modify|change column 列名 【列类型 约束】;</p>
+<h2 id="table-modification">Table modification</h2>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>语法 alter table 表名 add</td>
+        <td>drop</td>
+        <td>modify</td>
+        <td>change column 列名 【列类型 约束】;</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">#</span><span class="err">①修改列名</span>
 
 <span class="k">ALTER</span> <span class="k">TABLE</span> <span class="n">book</span> <span class="n">CHANGE</span> <span class="k">COLUMN</span> <span class="n">publishdate</span> <span class="n">pubDate</span> <span class="nb">DATETIME</span><span class="p">;</span>
@@ -154,8 +174,11 @@ create table 表名(
 
 <span class="k">DESC</span> <span class="n">book</span><span class="p">;</span>
 </code></pre></div></div>
-<h3 id="3表的删除">3.表的删除</h3>
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">EXISTS</span> <span class="n">book_author</span><span class="p">;</span>
+
+<h2 id="table-drop">Table drop</h2>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">EXISTS</span> <span class="n">book_author</span><span class="p">;</span>
 
 <span class="k">SHOW</span> <span class="n">TABLES</span><span class="p">;</span>
 
@@ -168,7 +191,9 @@ create table 表名(
 <span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">EXISTS</span> <span class="err">旧表名</span><span class="p">;</span>
 <span class="k">CREATE</span> <span class="k">TABLE</span>  <span class="err">表名</span><span class="p">();</span>
 </code></pre></div></div>
-<h3 id="4表的复制">4.表的复制</h3>
+
+<h2 id="table-copy">Table copy</h2>
+
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">author</span> <span class="k">VALUES</span>
 <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">'村上春树'</span><span class="p">,</span><span class="s1">'日本'</span><span class="p">),</span>
 <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">'莫言'</span><span class="p">,</span><span class="s1">'中国'</span><span class="p">),</span>
