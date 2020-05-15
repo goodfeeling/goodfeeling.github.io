@@ -1,6 +1,7 @@
 ---
 layout: default
 author: Willow Rosenberg
+isArticle: false
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

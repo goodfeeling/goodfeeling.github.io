@@ -30,6 +30,8 @@
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
     <![endif]-->
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   </head>
@@ -56,9 +58,10 @@
       </div><!-- end banner -->
 
     <div class="wrapper">
-      <nav>
+      <nav class="wrapper-nav">
         <ul></ul>
       </nav>
+
       <section>
         
         <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
@@ -225,6 +228,8 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
 </code></pre></div></div>
 
+
+        
       </section>
       
       <div class="category-list">
@@ -283,11 +288,26 @@
 
       </div>
 
+      
+
       <footer>
         
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small></p>
       </footer>
     </div>
+
+      <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+        <script>
+              var gitment = new Gitment({
+                  owner: 'goodfeeling',
+                  repo: 'goodfeeling.github.io',
+                  oauth: {
+                      client_id: '3e4b4301695bc13687e6',
+                      client_secret: 'd3b889476dec1e07ccd42cf322082d7a96f5ded8',
+                  },
+              });
+              gitment.render('gitmentContainer');
+        </script>
 
     
 

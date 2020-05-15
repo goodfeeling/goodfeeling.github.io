@@ -357,28 +357,28 @@ section {
 small {
   font-size:12px;
 }
-nav::-webkit-scrollbar {
+.wrapper-nav::-webkit-scrollbar {
     background-color: lightgray;
     width: 9px;
     height: 10px;
 }
 /*滚动条两端方向按钮*/
-nav::-webkit-scrollbar-button {
+.wrapper-nav::-webkit-scrollbar-button {
   border-radius: 5px; 
 }
 
 /*滚动条中间滑动部分*/
-nav::-webkit-scrollbar-thumb {
+.wrapper-nav::-webkit-scrollbar-thumb {
     background-color: #ffcc00;
     border-radius: 5px;
 }
 
 /*滚动条右下角区域*/
-nav::-webkit-scrollbar-corner {
+.wrapper-nav::-webkit-scrollbar-corner {
     background-color: red;
 }
 
-nav {
+.wrapper-nav {
   direction: rtl;
   scrollbar-width: none; /* firefox */
   -ms-overflow-style: none; /* IE 10+ */
@@ -455,7 +455,7 @@ footer {
     margin:0;
   }
 
-  nav{
+  .wrapper-nav{
     display: none;
   }
 
@@ -598,7 +598,7 @@ footer {
 }
 
 @media print, screen and (max-height: 480px) {
-  nav {
+  .wrapper-nav {
     display: none;
   }
 
