@@ -22,11 +22,12 @@ task :post do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts "layout: post"
+    post.puts "layout: default"
 
 
-    post.puts "category: post"
+    post.puts "categories: post"
     post.puts "tags: "
+    post.puts "isArticle: true"
     post.puts "---"
   end
 end # task :post
