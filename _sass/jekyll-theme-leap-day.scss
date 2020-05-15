@@ -112,6 +112,9 @@ section img {
   background:#F16E50;
   color:#fff;
 }
+#tag-cloud a sup{
+  font-size:16px;
+}
 #tag-cloud a.tagc3{
   background:#006633;
   color:#fff;
@@ -121,17 +124,17 @@ section img {
   background:#0099ff;
 }
 .tag-top {
-  position: fixed;
-  top: 420px;
-  left:50%;
+  position: absolute;
+  top: 0px;
+  left:60%;
   margin-left:280px;
 }
 .category-list {
-  height:200px;
+  height:500px;
   overflow:auto;
   width: 230px;
   position: fixed;
-  top: 200px;
+  top: 220px;
   left:50%;
   margin-left:280px;
 }

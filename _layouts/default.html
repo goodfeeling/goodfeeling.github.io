@@ -27,18 +27,27 @@
       <header>
         <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
         <p>{{ page.description | default: site.description | default: site.github.project_tagline }}</p>
+        <div class="tag-top">
+        <div id="tag-cloud">
+          {% for tag in site.tags %}
+            <a href="{{site.baseurl}}/tags/{{tag[0] | cgi}}" title="{{ tag[0] }}">
+              {{ tag[0] }}<sup>{{ tag[1].size }}</sup>&nbsp;
+            </a>
+          {% endfor %}
+        </div>
+      </div>
       </header>
 
       <div id="banner">
         <span id="logo"></span>
 
-        <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>
+        <a href="/" class="button fork"><strong>Index Page</strong></a>
         {% if site.show_downloads %}
           <div class="downloads">
             <!-- <span>导航:</span> -->
             <ul>
-              <li><a href="{{ site.about }}" class="button">关于</a></li>
-              <li><a href="/" class="button">首页</a></li>
+<!--               <li><a href="{{ site.about }}" class="button">关于</a></li> -->
+              <li><a href="{{ site.github.repository_url }}" class="button">View On GitHub</a></li>
             </ul>
           </div>
         {% endif %}
@@ -115,15 +124,7 @@
             {% endif %}
           {% endfor %}
       </div>
-      <div class="tag-top">
-        <div id="tag-cloud">
-          {% for tag in site.tags %}
-            <a href="{{site.baseurl}}/tags/{{tag[0] | cgi}}" title="{{ tag[0] }}">
-              {{ tag[0] }}<sup>{{ tag[1].size }}</sup>&nbsp;
-            </a>
-          {% endfor %}
-        </div>
-      </div>
+      
       
       <footer>
         {% if site.github.is_project_page %}
@@ -179,7 +180,7 @@
     });
     </script>
     <script type="text/javascript">
-      var radius = 90; //标签云半径
+      var radius = 70; //标签云半径
           var d = 200;
           var dtr = Math.PI / 180;
           var mcList = [];
@@ -206,7 +207,7 @@
                 return function () {
                   obj.on = true;
                   this.style.zIndex = 9999;
-                  this.style.color = '#fff';
+                  this.style.color = '#ffcc00';
                   this.style.padding = '5px 5px';
                   this.style.filter = "alpha(opacity=100)";
                   this.style.opacity = 1;
@@ -216,7 +217,7 @@
                 return function () {
                   obj.on = false;
                   this.style.zIndex = obj.zIndex;
-                  this.style.color = '#fff';
+                  this.style.color = '#ffcc00';
                   this.style.padding = '5px';
                   this.style.filter = "alpha(opacity=" + 100 * obj.alpha + ")";
                   this.style.opacity = obj.alpha;
